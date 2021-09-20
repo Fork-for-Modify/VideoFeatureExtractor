@@ -33,6 +33,7 @@ if __name__ == "__main__":
 
     all_files = os.walk(video_root_path)
     for path, d, filelist in all_files:
+        filelist.sort()
         for file_name in filelist:
             video_path = os.path.join(path, file_name)
             video_id = video_path.replace("\\","/").split("/")[-1].split(".")[0]
